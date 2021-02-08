@@ -7,6 +7,9 @@ module.exports = app => {
     
     router.post('/task', task.create);
 
+    //Find all tasks
+    router.get('/task', task.findAll);
+
     app.use('/', router);
     
 
