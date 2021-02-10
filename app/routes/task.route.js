@@ -4,7 +4,7 @@ module.exports = app => {
     var router = require("express").Router();
 
     // Create a new Tutorial
-    
+
     router.post('/task', task.create);
 
     //Find all tasks
@@ -13,8 +13,10 @@ module.exports = app => {
     // Find by ID
     router.get("/task/:id", task.findOne);
 
+    // Update a task
+    router.put("/task/:id", task.update);
 
     app.use('/', router);
-    
+
 
 };
