@@ -16,6 +16,8 @@ module.exports = app => {
     // Update a task
     router.put("/task/:id", task.update);
 
+    router.delete("/task/:id", task.delete);
+
     app.use('/', router);
 
 
